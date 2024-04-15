@@ -14,6 +14,11 @@ export async function getHeroById(id){
     return await Superheroes.findById(id)
 }
 
-export async function disconnectDatabase() {
-    await mongoose.disconnect();
+export async function createSuperhero(heroDetail) {
+    return await Superheroes.create(heroDetail)
 }
+
+export async function disconnectDatabase() {
+    await mongoose.disconnect()
+}
+
