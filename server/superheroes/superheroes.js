@@ -11,7 +11,7 @@ export async function getAllHeroes(){
 }
 
 export async function getHeroById(id){
-    return tempHeroes[0]
+    return await Superheroes.findById(id)
 }
 
 export async function disconnectDatabase() {

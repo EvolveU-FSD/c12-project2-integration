@@ -10,6 +10,9 @@ router.get('/', async (req, res)=>{
 })
 
 // get a superhero by id
+// in my example I could run
+// curl http://localhost:3000/api/superheroes/661d4c62d77b573103f5dd8d
+// and get Mr. Incredible
 router.get('/:id', async (req, res) => {
     const id = req.params.id;
     const record = await Superheroes.getHeroById(id);
