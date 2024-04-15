@@ -7,7 +7,7 @@ function HeroRow({ hero }) {
     return (
         <div className='hero-row'>
             <h2>{hero.name}</h2>
-            <div>{hero.superPower}</div>
+            <div>{hero.superPowers}</div>
         </div>
     )
 }
