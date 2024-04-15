@@ -19,4 +19,13 @@ router.get('/:id', async (req, res) => {
     res.send(record);
 })
 
+// 
+// tested with curl -X POST -H 'Content-Type: application/json' -d '{"name":"Ironman","costume":"red alloy suit, arc reactor","superPowers":"suit strength, suit bulletproofness, suit flight, onboard jarvis"}' http://localhost:3000/api/superheroes
+//
+router.post('/', async (req, res) => {
+    const newHero = req.body
+    const record = await Superheroes.createSuperhero(newHero)
+    res.send(record)
+})
+
 export default router
