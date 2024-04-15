@@ -3,16 +3,16 @@ import { fetchAllSuperheroes } from "../api"
 
 import "./AllSuperheroesPage.css"
 
-function HeroRow({ hero }) {
+function HeroRow({ hero, setSelectedHero }) {
     return (
-        <div className='hero-row'>
+        <div className='hero-row' onClick={() => setSelectedHero(hero)}>
             <h2>{hero.name}</h2>
             <div>{hero.superPowers}</div>
         </div>
     )
 }
 
-function AllSuperheroesPage({ createNewHero }) {
+function AllSuperheroesPage({ createNewHero, setSelectedHero }) {
 
     const [heroes, setHeroes] = useState([ ])
 
@@ -32,7 +32,7 @@ function AllSuperheroesPage({ createNewHero }) {
                 <button onClick={ createNewHero }>Create New</button>
             </div>
             { heroes.map((hero) => (
-                <HeroRow key={hero._id} hero={hero}/>
+                <HeroRow key={hero._id} hero={hero} setSelectedHero={setSelectedHero}/>
             ))}
         </div>
     )
