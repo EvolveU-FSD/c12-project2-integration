@@ -1,21 +1,13 @@
-import mongoose from "mongoose"
+import mongoose, { Schema } from "mongoose"
 
 await mongoose.connect('mongodb://localhost:27017/c12Integration')
 
-// if only there was a model here!
+const SuperheroSchema = new Schema({ name: String, costume: String, superPowers: String})
 
-// temporary hero for testing
-const tempHeroes = [
-    { 
-        _id: '123456abcdef',
-        name: 'Superman',
-        costume: 'Blue body suit with red cape.',
-        superPower: 'invincible, super strength, super speed, flight, laser beams',
-    }
-]
+const Superheroes = mongoose.model("superhero", SuperheroSchema, "superheroes")
 
 export async function getAllHeroes(){
-    return tempHeroes
+    return await Superheroes.find()
 }
 
 export async function getHeroById(id){
