@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 import AllSuperheroesPage from './pages/AllSuperheroesPage'
+import SuperheroDetailPage from './pages/SuperheroDetailPage'
 
 function App() {
   
@@ -13,8 +14,8 @@ function App() {
 
   return (
     <>
-      <AllSuperheroesPage setSelectedHero={setSelectedHero} createNewHero={createNewHero}/>
-      <div>Selected hero: {JSON.stringify(selectedHero)}</div>
+      { !selectedHero && <AllSuperheroesPage setSelectedHero={setSelectedHero} createNewHero={createNewHero}/> }
+      { selectedHero && <SuperheroDetailPage hero = {selectedHero} /> }
     </>
   )
 }
