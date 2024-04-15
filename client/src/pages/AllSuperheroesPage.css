@@ -1,0 +1,31 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+button {
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+}
+
+.hero-row {
+    background: cornflowerblue;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    border-radius: 0.5em;
+}
+
+.hero-row h2 {
+    padding-top: 0.5em;
+    margin-bottom: 0.2em;
+}
