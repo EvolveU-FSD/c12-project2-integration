@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "661d4c62d77b573103f5dd8d"
+  },
+  "name": "Mr. Incredible",
+  "costume": "Red and black body suit (no cape)",
+  "superPowers": "Super strength, invulnerability, Disney based marketing machine"
+},
+{
+  "_id": {
+    "$oid": "661d4ce0d77b573103f5dd8e"
+  },
+  "name": "Mr. Furious",
+  "costume": "Studded leather jacket",
+  "superPowers": "gets really mad, shouting"
+},
+{
+  "_id": {
+    "$oid": "661d4d28d77b573103f5dd8f"
+  },
+  "name": "Wolverine",
+  "costume": "X-Men suit, sometimes street clothes",
+  "superPowers": "instant healing, indestructible skeleton, adamantine claws"
+}]
